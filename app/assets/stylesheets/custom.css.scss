@@ -12,6 +12,10 @@ $dark-white: #BDC3C7;
 $light-grey: #95A5A6;
 $dark-grey: #7F8C8D;
 
+body {
+  font-family: 'Lato', Helvetica, sans-serif;
+}
+
 /* spacing */
 $large-space: 20px;
 $medium-space: 10px;
@@ -21,6 +25,8 @@ $small-space: 5px;
 .hero-unit {
   margin-top: 20px;
   background-color: $dark-blue;
+  border-radius: $medium-space;
+  text-align: center;
   h1 {
     color: $light-white;
   }
@@ -31,7 +37,7 @@ $small-space: 5px;
 
 .btn {
   border: none;
-  background: $light-orange;
+  background: $dark-yellow;
   color: white;
   font-size: 16.5px;
   text-decoration: none;
@@ -44,8 +50,10 @@ $small-space: 5px;
   -o-transition: 0.25s;
   transition: 0.25s;
   -webkit-backface-visibility: hidden;
+  padding: $medium-space;
+  display: block;
   &:hover{
-    background: $dark-orange;
+    background: $light-yellow;
   }
 }
 
@@ -53,7 +61,10 @@ section {
   h2 {
     color: $dark-blue;
   }
-  padding: 0 $large-space;
+  div {
+    padding: 0 $large-space;
+    text-align: center;
+  }
 }
 
 footer {
@@ -66,32 +77,22 @@ footer {
   background-color: $light-orange;
   border-radius: $medium-space;
   padding: $large-space;
-  position: relative; 
   color: $light-white;
   text-align: center;
-}
-.login-form:before {
-  content: "";
-  border-style: solid;
-  border-width: 12px 12px 12px 0;
-  border-color: transparent $light-orange transparent transparent;
-  height: 0px;
-  position: absolute;
-  left: -12px;
-  top: 35px;
-  width: 0;
-  -webkit-transform: rotate(360deg);
+  h3 {
+    padding: 0;
+    margin: 0;
+  }
+  .btn {
+    margin-bottom: $medium-space;
+  }
 }
 .login-form .login-field {
   border-color: transparent;
-  margin: auto;
-  padding: $medium-space $small-space;
+  padding: $large-space $medium-space;
   background-color: $light-white;
   color: $light-grey;
   display: block;
-}
-.login-form .login-field:focus {
-  color: $light-orange; 
 }
 
 /* sticky footer */
@@ -124,4 +125,17 @@ footer {
     padding-left: 20px;
     padding-right: 20px;
   }
+}
+
+/* clear fix */
+.group:before,
+.group:after  {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  zoom: 1; /* IE6&6 */
 }
