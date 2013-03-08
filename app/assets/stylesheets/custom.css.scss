@@ -54,6 +54,7 @@ $small-space: 5px;
   display: block;
   &:hover{
     background: $light-yellow;
+    color: $light-orange;
   }
 }
 
@@ -64,6 +65,12 @@ section {
   div {
     padding: 0 $large-space;
     text-align: center;
+  }
+  div:first-child{
+    border-right: $small-space dotted $dark-white;
+  }
+    div:last-child{
+    border-left: $small-space dotted $dark-white;
   }
 }
 
