@@ -1,4 +1,6 @@
 Policycompass::Application.routes.draw do
+  root to: 'static_pages#prelaunch'
+
   get "static_pages/prelaunch"
 
   # The priority is based upon order of creation:
