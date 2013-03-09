@@ -59,6 +59,7 @@ $small-space: 5px;
 }
 
 section {
+  vertical-align: middle;
   h2 {
     color: $dark-blue;
   }
@@ -66,10 +67,8 @@ section {
     padding: 0 $large-space;
     text-align: center;
   }
-  div:first-child{
+  div:nth-child(2){
     border-right: $small-space dotted $dark-white;
-  }
-    div:last-child{
     border-left: $small-space dotted $dark-white;
   }
 }
@@ -77,6 +76,7 @@ section {
 footer {
   background-color: $dark-grey;
   color: $light-white;
+  padding: $medium-space;
 }
 
 /* flat ui login form */
