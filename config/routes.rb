@@ -7,6 +7,8 @@ Policycompass::Application.routes.draw do
 
   get "static_pages/dashboard"
 
+  get "static_pages/feed"
+
   resources :orgs do
     resources :policies do
       resources :questions
