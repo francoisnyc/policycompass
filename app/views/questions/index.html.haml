@@ -1,0 +1,7 @@
+/ The initial questions part of onboarding
+
+.container-fluid
+  =render :partial => 'layouts/onboarding_nav'
+  %h1 Answer these questions to get started
+  - @questions.each do |q|
+    =render :partial => 'layouts/question_card', :locals => {:question_body => q.question}
