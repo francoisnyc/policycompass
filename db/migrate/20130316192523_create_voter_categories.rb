@@ -1,8 +1,8 @@
 class CreateVoterCategories < ActiveRecord::Migration
   def change
     create_table :voter_categories do |t|
-      t.integer :voter_id
-      t.integer :category_id
+      t.integer :voter_id, :null => false
+      t.integer :category_id, :null => false
 
       t.timestamps
     end
