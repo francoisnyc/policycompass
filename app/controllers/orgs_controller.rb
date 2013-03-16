@@ -1,8 +1,8 @@
 class OrgsController < ApplicationController
-  before_filter :require_org, :except => [:new, :create]
+  before_filter :require_org, :except => [:new, :create, :index]
 
   def index
-    @orgs = Orgs.all
+    @orgs = Org.all
   end
 
   def show
