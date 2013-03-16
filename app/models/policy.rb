@@ -5,5 +5,5 @@ class Policy < ActiveRecord::Base
   attr_accessible :abstract, :link, :name
 
   validates :name, :abstract, presence: true
-  
+
 end
