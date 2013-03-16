@@ -3,6 +3,8 @@
     padding-left: 0;
     padding-right: 0;
 
+    background: #f9f9f9;
+
     .nav li {
       overflow: visible;
 
@@ -29,18 +31,28 @@
             width: 0;
             position: absolute;
             display: block;
-            border-color: transparent transparent transparent #e6e6e6;
             border-width: 20px;
             border-style: solid;
             right: -39px;
             top: 0;
-            z-index: 20;
+            z-index: 2;
           }
 
-          &:before {
+          &:before {  // arrow border
             right: -40px;
-            border-color: transparent transparent transparent red;
+            border-color: transparent transparent transparent #555;
           }
+
+          &:after {   // arrow body
+            border-color: transparent transparent transparent #f9f9f9;
+            right: -39px;
+          }
+        }
+      }
+
+      &.active {
+        a:after {
+          border-color: transparent transparent transparent #e6e6e6;
         }
       }
     }
