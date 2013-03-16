@@ -8,7 +8,7 @@ class CreateCandidateAnswers < ActiveRecord::Migration
       t.timestamps
     end
 
-    add_index :candidate_id
-    add_index :question_id
+    add_index :candidate_answers, :candidate_id
+    add_index :candidate_answers, :question_id
   end
 end
