@@ -6,6 +6,9 @@ class StaticPagesController < ApplicationController
   end
 
   def onboard_questions
+    render :layout => "onboarding"
   end
 
+  def index
+  end
 end

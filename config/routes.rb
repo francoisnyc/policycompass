@@ -1,5 +1,5 @@
 Policycompass::Application.routes.draw do
-  root to: 'static_pages#prelaunch'
+  root to: 'static_pages#index'
 
   get "static_pages/prelaunch"
 
@@ -10,20 +10,34 @@ Policycompass::Application.routes.draw do
   get "static_pages/feed"
 
   resources :orgs do
+    member do 
+      get 'dashboard'
+    end
     resources :policies do
       resources :questions
     end
   end
 
   resources :voters do 
+    member do 
+      get 'feed'
+      get 'dashboard'
+    end
     resources :voter_answers
   end
 
   resources :candidates do
+    member do 
+      get 'feed'
+      get 'dashboard'
+    end
     resources :candidate_answers
   end
 
-  
+  match "auth/:service"          => "auth#service"
+  match "auth/:service/callback" => "auth#callback"
+  match "logout"                 => "auth#logout"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

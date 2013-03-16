@@ -1,7 +1,8 @@
 / The initial questions part of onboarding
 
 .container-fluid
-  =render :partial => 'layouts/onboarding_nav'
   %h1 Answer these questions to get started
-  - 10.times do |n|
-    =render :partial => 'layouts/question_card'
+  .onboard-questions-group.row-fluid
+    - 2.times do
+      .span6
+        =render :partial => 'questions/question', :collection => Question.limit(5)

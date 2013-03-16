@@ -1,7 +1,5 @@
-= render :partial => 'layouts/main_nav'
 .container-fluid
   .row-fluid
     .span8.offset2
       %h1 Question time
-      - 5.times do |n|
-        = render :partial => 'layouts/question_card'
+      = render :partial => 'questions/question', :collection => Question.limit(5)
