@@ -20,15 +20,16 @@ class CandidatesController < ApplicationController
   def show
   end
 
+  def feed
+  end
+
+  def dashboard
+  end
+
   private
 
     def require_candidate
       @candidate = Candidate.find(params[:id])
     end
 
-    def feed
-    end
-
-    def dashboard
-    end
 end

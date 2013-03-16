@@ -27,15 +27,16 @@ class VotersController < ApplicationController
   def show
   end
 
+  def feed
+  end
+
+  def dashboard
+  end
+
   private
 
     def require_voter
       @voter = Voter.find(params[:id])
     end
 
-    def feed
-    end
-
-    def dashboard
-    end
 end

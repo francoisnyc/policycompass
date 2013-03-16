@@ -3,6 +3,6 @@ class Voter < ActiveRecord::Base
 
   attr_accessible :email, :name, :formal_affiliation, :location
 
-  validates :name, presence: true
-  validates :email, presence: true
+  validate :name, presence: true
+  validate :email, presence: true
 end

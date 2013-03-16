@@ -31,16 +31,13 @@ class OrgsController < ApplicationController
     end
   end
 
+  def dashboard
+  end
+
   private
 
     def require_org
       @org = Org.find(params[:id])
-    end
-
-    def feed
-    end
-
-    def dashboard
     end
 
 
