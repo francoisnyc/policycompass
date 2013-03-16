@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "nav";
 
 /* custom colors // HT FLAT-UI */
 $light-blue: #3498DB;
@@ -55,6 +56,12 @@ $small-space: 5px;
   &:hover{
     background: $light-yellow;
     color: $light-orange;
+  }
+}
+
+.question-opts {
+  .btn.active {
+    @extend .btn-success;
   }
 }
 
