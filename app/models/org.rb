@@ -4,4 +4,6 @@ class Org < ActiveRecord::Base
 
   attr_accessible :contact_name, :location, :name, :phone_number, :website
 
+  validates :name, :location, :contact_name, :website, :phone_number, presence: true
+
 end
