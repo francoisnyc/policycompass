@@ -1,0 +1,9 @@
+= render :partial => "layouts/main_nav"
+.container-fluid
+  %h1= "Your name"
+  .row-fluid
+    .span6
+      = render :partial => "layouts/policy_matched"
+      = render :partial => "layouts/candidate_matched"
+    .span6
+      = render :partial => "layouts/policy_areas"
