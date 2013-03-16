@@ -25,6 +25,10 @@ end
 
 gem 'jquery-rails'
 
+group :test, :development do
+  gem 'rspec-core'
+end
+
 group :production do
 	gem 'pg', '0.12.2'
 end
