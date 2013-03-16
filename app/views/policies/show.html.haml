@@ -1,0 +1,6 @@
+%h1= @policy.name
+.policy-info
+  =link_to("More Info", @policy.link)
+  %p= @policy.abstract
+
+= render partial: 'questions/question', collection: @policy.questions

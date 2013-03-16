@@ -7,6 +7,19 @@ class CandidatesController < ApplicationController
 
   def create
     @candidate = Candidate.create(params[:candidate])
+
+    respond_to do |format|
+      if @candidate.save
+        format.html  { redirect_to(@candidate,
+                      :notice => 'Candidate was successfully created.') }
+        format.json  { render :json => @candidate,
+                      :status => :created, :location => @candidate }
+      else
+        format.html  { render :action => "new" }
+        format.json  { render :json => @candidate.errors,
+                    :status => :unprocessable_entity }
+      end
+    end
   end
 
   def edit
