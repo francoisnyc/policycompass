@@ -1,0 +1,6 @@
+.policy-card.well
+  .policy-name
+    =link_to(policy.name, org_policy_path(policy.org.id, policy.id))
+    =link_to("(more info)", policy.link)
+  .policy-abstract
+    %p= policy.abstract
