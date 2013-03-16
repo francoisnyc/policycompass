@@ -1,2 +1,21 @@
 <h1>Candidate#new</h1>
 <p>Find me in app/views/candidate/new.html.erb</p>
+
+<h1>Add new candidate</h1>
+<%= form_for(@candidate) do |f| %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :website %><br />
+    <%= f.text_field :website %>
+  </div>
+  <div class="field">
+    <%= f.label :formal_affiliation %><br />
+    <%= f.text_area :formal_affiliation %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+ <% end %>
