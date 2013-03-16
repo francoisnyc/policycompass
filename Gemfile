@@ -16,7 +16,7 @@ end
 
 group :test, :development do
   gem 'rspec-core'
-  gem 'ffaker'
+  gem 'faker'
 end
 
 # Gems used only for assets and not required
