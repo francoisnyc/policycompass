@@ -4,4 +4,8 @@ class StaticPagesController < ApplicationController
 
   def dashboard
   end
+
+  def onboard_questions
+  end
+
 end
