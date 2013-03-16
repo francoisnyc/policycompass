@@ -1,5 +1,7 @@
 class Candidate < ActiveRecord::Base
-  attr_accessible :formal_affiliation, :name, :website
+  include PolicyCompass::Categorizable
 
   has_many :candidate_answers
+
+  attr_accessible :formal_affiliation, :name, :website
 end
