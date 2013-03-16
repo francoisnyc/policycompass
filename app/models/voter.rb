@@ -1,5 +1,6 @@
 class Voter < ActiveRecord::Base
   include PolicyCompass::Categorizable
+  include PolicyCompass::Answerer
 
   has_many :voter_answers
 
