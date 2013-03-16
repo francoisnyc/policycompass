@@ -1,7 +1,13 @@
 Policycompass::Application.routes.draw do
   root to: 'static_pages#prelaunch'
 
+  get "static_pages/prelaunch"
+
+  get "static_pages/onboard_questions"
+
   get "static_pages/dashboard"
+
+  get "static_pages/feed"
 
   resources :orgs do
     member do 
