@@ -20,7 +20,7 @@ class QuestionsController < ApplicationController
   def create
     @question = Question.new(params[:question])
     if @question.save
-      redirect_to @question, notice: 'Question was successfully created.'
+      redirect_to @question.policy, notice: 'Question was successfully created.'
     else
       render action: 'new'
     end
@@ -29,7 +29,7 @@ class QuestionsController < ApplicationController
   def update
     @question = @question.find(params[:question_id])
     if @question.update_attributes(params[:question])
-      redirect_to @question, notice: 'Question was successfully updated.'
+      redirect_to @question.policy, notice: 'Question was successfully updated.'
     else
       render action: 'edit'
     end
