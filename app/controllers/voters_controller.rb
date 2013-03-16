@@ -28,4 +28,10 @@ class VotersController < ApplicationController
       render action: 'edit'
     end
   end
+
+  def feed
+  end
+
+  def dashboard
+  end
 end
