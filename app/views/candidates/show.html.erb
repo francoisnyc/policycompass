@@ -1,0 +1,23 @@
+<%= render :partial => "layouts/main_nav" %>
+
+<div class='container-fluid'>
+	<div class='row-fluid'>
+		<div class='span3'>
+			<h2><%= @candidate.name %></h2>
+		</div>
+	</div>
+	<div class='row-fluid'>
+		<div class='span4'>
+			My Info
+			Email: <%= @candidate.website %>
+			Party: <%= @candidate.formal_affiliation %>
+		</div>
+		<div class='span8'>
+			<% if @questions_answered %>
+				<% @questions_answered.each do |answer| %>
+					<%= @questions_answered.question_body %>
+				<% end %>
+			<% end %>
+			I've answered questions and they are here. 
+		</div>
+</div>
