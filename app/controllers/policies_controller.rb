@@ -1,6 +1,6 @@
 class PoliciesController < ApplicationController
 
- def index
+  def index
     @org = Org.find(params[:org_id])
     @policies = @org.policies
   end
@@ -10,30 +10,33 @@ class PoliciesController < ApplicationController
   end
 
   def new
+    @org = Org.find(params[:org_id])
     @policy = Policy.new
   end
 
   def edit
-    @policy = Policy.find(params[:policy_id])
+    @policy = Policy.find(params[:id])
+    @org = @policy.org
   end 
 
   def create
+    @org = Org.find(params[:org_id])
     @policy = Policy.new(params[:policy])
+    @policy.org = @org
     if @policy.save
-      redirect_to @policy, notice: 'Policy was successfully created.'
+      redirect_to [@org, @policy], notice: 'Policy was successfully created.'
     else
       render action: 'new'
     end
   end
 
   def update
-    @policy = @policy.find(params[:policy_id])
+    @policy = Policy.find(params[:id])
     if @policy.update_attributes(params[:policy])
-      redirect_to @policy, notice: 'Policy was successfully updated.'
+      redirect_to [@policy.org, @policy], notice: 'Policy was successfully updated.'
     else
       render action: 'edit'
     end
   end
-
 
 end
