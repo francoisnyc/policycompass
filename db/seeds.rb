@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 require 'faker'
 
-AFFILIATIONS = ["Democratic Party", "Republican Party", "Independant", "Tea Party", "Green Party", "Libertarian Party", "Marxists Annonymous"]
+AFFILIATIONS = ["Democratic Party", "Republican Party", "Independent", "Tea Party", "Green Party", "Libertarian Party", "Marxists Annonymous"]
 
 #Method for prompting the user for the number of records per model they want to seed into the database.
 def ask_for_records(model)
