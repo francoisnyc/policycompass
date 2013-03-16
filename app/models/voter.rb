@@ -1,8 +1,8 @@
 class Voter < ActiveRecord::Base
-  has_many :voter_answers, :questions through: :voter_answers
+  has_many :voter_answers
 
   attr_accessible :email, :name, :formal_affiliation, :location
 
-  validates :name, presence: true
-  validates :email, presence: true
+  validate :name, presence: true
+  validate :email, presence: true
 end

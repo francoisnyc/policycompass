@@ -1,31 +1,6 @@
 Policycompass::Application.routes.draw do
   root to: 'static_pages#prelaunch'
 
-  get "static_pages/prelaunch"
-
-  get "candidate/new"
-
-  get "candidate/edit"
-
-  get "candidate/feed"
-
-  get "candidate/dashboard"
-
-  get "org/new"
-
-  get "org/edit"
-
-  get "org/feed"
-
-  get "org/dashboard"
-
-  get "user/new"
-
-  get "user/edit"
-
-  get "user/feed"
-
-  get "user/dashboard"
 
   get "static_pages/dashboard"
 

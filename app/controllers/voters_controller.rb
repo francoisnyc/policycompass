@@ -1,18 +1,11 @@
 class VotersController < ApplicationController
+  before_filter :require_voter, :except => [:new, :create]
+
   def new
     @voter = Voter.new
   end
 
-  def show
-    @voter = Voter.find(params[:voter_id])
-  end
-
-  def edit
-    @voter = Voter.find(params[:voter_id])
-  end
-
   def create
-    @voter = Voter.new(params[:voter])
     if @voter.save
       redirect_to @voter, notice: 'Your profile was successfully created.'
     else
@@ -20,8 +13,10 @@ class VotersController < ApplicationController
     end
   end
 
+  def edit
+  end
+
   def update
-    @voter = @voter.find(params[:voter_id])
     if @voter.update_attributes(params[:voter])
       redirect_to @voter, notice: 'Your profile was successully updated.'
     else
@@ -29,9 +24,19 @@ class VotersController < ApplicationController
     end
   end
 
+  def show
+  end
+
   def feed
   end
 
   def dashboard
   end
+
+  private
+
+    def require_voter
+      @voter = Voter.find(params[:id])
+    end
+
 end
