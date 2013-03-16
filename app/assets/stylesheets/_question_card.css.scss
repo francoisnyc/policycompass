@@ -1,11 +1,15 @@
 .question-card {
   overflow: hidden;
 
-
   .question-bottom {
     margin: 9px -19px -19px;
     padding: 9px 19px 10px;
     border-top: 1px solid #e6e6e6;
     background-color: #e6e6e6;
+  }
+}
+
+.onboard-questions-group {
+  .question-card {
   }
 }
