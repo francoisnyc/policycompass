@@ -8,4 +8,6 @@ class StaticPagesController < ApplicationController
   def onboard_questions
   end
 
+  def index
+  end
 end

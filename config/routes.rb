@@ -1,5 +1,5 @@
 Policycompass::Application.routes.draw do
-  root to: 'static_pages#prelaunch'
+  root to: 'static_pages#index'
 
   get "static_pages/prelaunch"
 
