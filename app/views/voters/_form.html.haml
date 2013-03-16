@@ -1,0 +1,8 @@
+= form_for @voter, :builder => LabellingFormBuilder do |f|
+  = f.text_field :name
+  = f.text_field :email
+  = f.text_field :formal_affiliation
+  = f.text_field :location
+  %hr/
+  = f.submit "Submit"
+
