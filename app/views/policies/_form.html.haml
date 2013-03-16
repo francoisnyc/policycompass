@@ -1,0 +1,6 @@
+= form_for [@org, @policy], :builder => LabellingFormBuilder do |f|
+  = f.text_field :name
+  = f.text_field :link
+  = f.text_field :abstract
+  %hr/
+  = f.submit "Submit"
