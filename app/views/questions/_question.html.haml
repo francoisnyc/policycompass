@@ -1,11 +1,10 @@
 .question-card.well
-  .question-text=question_body
+  .question-text= question.question
   .btn-group{:"data-toggle"=>"buttons-radio"}
     %a.btn{:href=>"#"} I agree
     %a.btn{:href=>"#"} I disagree
     %a.btn{:href=>"#"} I don't care
   %a{:href=>"#"} Skip this question
   .question-bottom
-    .category Category
-    .org Org
-    .policy Policy
+    .org= question.org.name
+    .policy= question.policy.name

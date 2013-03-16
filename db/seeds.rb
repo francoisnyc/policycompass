@@ -48,7 +48,7 @@ if entered_num.integer? && entered_num > 0
   candidate = entered_num.times.map do
     Candidate.create do |c|
       c.name = Faker::Name.name
-      c.website = Faker::Internet.domain_name
+      c.website = Faker::Internet.url
       c.formal_affiliation = AFFILIATIONS.sample(1).first
     end
   end
@@ -70,7 +70,7 @@ if entered_num.integer? && entered_num > 0
       o.name = Faker::Company.name
       o.location = Faker::Address.state_abbr
       o.contact_name = Faker::Name.name
-      o.website = Faker::Internet.domain_name
+      o.website = Faker::Internet.url
       o.phone_number = Faker::PhoneNumber.phone_number
       o.approved = true
     end
@@ -91,7 +91,7 @@ if entered_num.integer? && entered_num > 0
   policy = entered_num.times.map do
     Policy.create do |p|
       p.name = Faker::Lorem.sentence(1)
-      p.link = Faker::Internet.domain_name
+      p.link = Faker::Internet.url
       p.abstract = Faker::Lorem.paragraph(rand(2..5))
       p.org = Org.all.sample(1).first
     end
@@ -120,4 +120,3 @@ else
   STDOUT.puts "\nPlease enter a whole number greater than 0."
   entered_num = STDIN.gets.chomp.to_i
 end
-

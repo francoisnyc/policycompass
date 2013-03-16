@@ -1,0 +1,14 @@
+%h1= @org.name
+%h3 Contact Information
+
+%p Contact Name: #{@org.contact_name}
+%p Location: #{@org.location}
+%p Phone Number: #{@org.phone_number}
+%p
+  Website:
+  = link_to @org.website, @org.website
+
+%hr/
+
+%p= link_to "Back to Org list", orgs_path
+%p= link_to "Edit Org", edit_org_path(@org)
