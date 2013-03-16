@@ -3,4 +3,7 @@ class Policy < ActiveRecord::Base
   has_many :questions
 
   attr_accessible :abstract, :link, :name
+
+  validates :name, :abstract, presence: true
+  
 end
