@@ -27,6 +27,8 @@ Policycompass::Application.routes.draw do
 
   get "user/dashboard"
 
+  get "static_pages/dashboard"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

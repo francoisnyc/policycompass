@@ -1,2 +1,2 @@
-module CanidateHelper
+module CandidateHelper
 end
