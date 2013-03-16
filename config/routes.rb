@@ -3,13 +3,13 @@ Policycompass::Application.routes.draw do
 
   get "static_pages/prelaunch"
 
-  get "canidate/new"
+  get "candidate/new"
 
-  get "canidate/edit"
+  get "candidate/edit"
 
-  get "canidate/feed"
+  get "candidate/feed"
 
-  get "canidate/dashboard"
+  get "candidate/dashboard"
 
   get "org/new"
 
