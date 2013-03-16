@@ -2,6 +2,8 @@ Policycompass::Application.routes.draw do
   root to: 'static_pages#prelaunch'
 
 
+  get "static_pages/dashboard"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
