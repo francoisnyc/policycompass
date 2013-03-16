@@ -7,6 +7,22 @@ Policycompass::Application.routes.draw do
 
   get "static_pages/dashboard"
 
+  resources :orgs do
+    resources :policies do
+      resources :questions
+    end
+  end
+
+  resources :voters do 
+    resources :voter_answers
+  end
+
+  resources :candidates do
+    resources :candidate_answers
+  end
+
+  
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
