@@ -120,4 +120,3 @@ else
   STDOUT.puts "\nPlease enter a whole number greater than 0."
   entered_num = STDIN.gets.chomp.to_i
 end
-
