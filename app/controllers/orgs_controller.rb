@@ -1,10 +1,11 @@
 class OrgsController < ApplicationController
+  before_filter :require_org, :except => [:new, :create]
+
   def index
     @orgs = Orgs.all
   end
 
   def show
-    @org = Org.find(params[:org_id])
   end
 
   def new
@@ -12,11 +13,9 @@ class OrgsController < ApplicationController
   end
 
   def edit
-    @org = Org.find(params[:org_id])
   end 
 
   def create
-    @org = Org.new(params[:org])
     if @org.save
       redirect_to @org, notice: 'Organization was successfully created.'
     else
@@ -25,12 +24,25 @@ class OrgsController < ApplicationController
   end
 
   def update
-    @org = @org.find(params[:org_id])
     if @org.update_attributes(params[:org])
       redirect_to @org, notice: 'Organization was successfully updated.'
     else
       render action: 'edit'
     end
   end
+
+  private
+
+    def require_org
+      @org = Org.find(params[:id])
+    end
+
+    def feed
+    end
+
+    def dashboard
+    end
+
+
 
 end
