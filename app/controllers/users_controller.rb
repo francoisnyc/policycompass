@@ -1,12 +1,13 @@
 class UsersController < ApplicationController
   def new
-  	@user = User.new
+    @user = User.new
   end
 
   def create
     @user = User.new(params[:user])
     if @user.save
-      redirect_to @voter
+      flash[:success] = "Your user was successfully created!"
+      redirect_to root_path
     else
       render 'new'
     end

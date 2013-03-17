@@ -11,6 +11,9 @@
     /[if lt IE 9]
       %script{:src=>'js/html5shiv.js'}
   %body
-    =render :partial => 'layouts/main_nav'
-    =yield
-    =javascript_include_tag "application"
+    .container-fluid
+      =render :partial => 'layouts/main_nav'
+      - flash.each do |key, value|
+        .flash(class=key)= value
+      =yield
+      =javascript_include_tag "application"
