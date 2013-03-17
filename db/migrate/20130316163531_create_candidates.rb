@@ -5,6 +5,8 @@ class CreateCandidates < ActiveRecord::Migration
       t.string :website
       t.string :formal_affiliation
 
+      t.boolean :approved
+
       t.timestamps
     end
   end

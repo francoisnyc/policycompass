@@ -4,8 +4,11 @@ class CreatePolicies < ActiveRecord::Migration
       t.string :name
       t.string :link
       t.text :abstract
+      t.integer :org_id, :null => false
 
       t.timestamps
     end
+
+    add_index :policies, :org_id
   end
 end

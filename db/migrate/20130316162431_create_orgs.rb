@@ -7,6 +7,8 @@ class CreateOrgs < ActiveRecord::Migration
       t.string :website
       t.string :phone_number
 
+      t.boolean :approved
+
       t.timestamps
     end
   end
