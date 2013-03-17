@@ -1,12 +1,5 @@
 #wrap
   .container-fluid
-    #flash
-      - unless @voter || @org || @candidate
-        .singly
-          %h2 Get Started with Policy Compass
-          .row-fluid
-            -%w[twitter facebook].each do |service|
-              %a.btn.span6{:href=>"/voters/new"} Connect with #{service.capitalize}
     .hero-unit
       .row-fluid
         .span8
@@ -14,9 +7,16 @@
           = image_tag "compass.png"
           %h2 helping you navigate local NY candidates and their policy positions
         .span4.login-form
-          %h3 Keep me in the loop!
-          %input{:type=>"text", :class=>"login-field span12", :placeholder=>"Email address", :id=>"login-email"}
-          %a{:href=>"#", :class=>"btn btn-submit ashley-btn"} Submit
+          %h3 Get Started Now!
+          #flash
+            - unless @voter || @org || @candidate
+              .singly
+                .row-fluid
+                  -%w[twitter facebook].each do |service|
+                    %a.btn.span6{:href=>"/voters/new"} Connect with #{service.capitalize}
+              %h4 or
+              %input{:type=>"text", :class=>"login-field span12", :placeholder=>"Email address", :id=>"login-email"}
+              %a{:href=>"#", :class=>"btn btn-submit ashley-btn"} Submit
     .row-fluid
       .span4
         = image_tag "policy.png"
