@@ -30,6 +30,7 @@ GEM
       multi_json (~> 1.0)
     arel (3.0.2)
     awesome_print (1.1.0)
+    bcrypt-ruby (3.0.1)
     better_errors (0.0.8)
       coderay
       erubis
@@ -146,6 +147,7 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
+  bcrypt-ruby (= 3.0.1)
   better_errors
   binding_of_caller
   bootstrap-sass (= 2.1)
