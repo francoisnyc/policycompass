@@ -25,10 +25,14 @@ entered_num = ask_for_records("Voter")
 
 if entered_num.integer? && entered_num > 0
   voter = entered_num.times.map do
-    Voter.create do |u|
-      u.name = Faker::Name.name
-      u.location = Faker::Address.state
-      u.formal_affiliation = AFFILIATIONS.sample(1).first
+    user = User.create do |u|
+      u.email = Faker::Internet.email
+    end
+    Voter.create do |v|
+      v.user = user
+      v.name = Faker::Name.name
+      v.location = Faker::Address.state
+      v.formal_affiliation = AFFILIATIONS.sample(1).first
     end
   end
   STDOUT.puts "\n#{entered_num} records successfully created!"
@@ -45,7 +49,11 @@ entered_num = ask_for_records("Candidate")
 
 if entered_num.integer? && entered_num > 0
   candidate = entered_num.times.map do
+    user = User.create do |u|
+      u.email = Faker::Internet.email
+    end
     Candidate.create do |c|
+      c.user = user
       c.name = Faker::Name.name
       c.website = Faker::Internet.url
       c.formal_affiliation = AFFILIATIONS.sample(1).first
@@ -67,7 +75,11 @@ entered_num = ask_for_records("Org")
 
 if entered_num.integer? && entered_num > 0
   org = entered_num.times.map do
+    user = User.create do |u|
+      u.email = Faker::Internet.email
+    end
     Org.create do |o|
+      o.user = user
       o.name = Faker::Company.name
       o.location = Faker::Address.state_abbr
       o.contact_name = Faker::Name.name
