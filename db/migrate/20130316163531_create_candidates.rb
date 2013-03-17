@@ -4,6 +4,7 @@ class CreateCandidates < ActiveRecord::Migration
       t.string :name
       t.string :website
       t.string :formal_affiliation
+      t.string :email
 
       t.timestamps
     end
