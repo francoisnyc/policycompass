@@ -1,6 +1,6 @@
 .navbar.navbar-inverse.navbar-fixed-top
   .navbar-inner
-    %a.brand{:href => "#"} Policy Compass
+    =link_to "Policy Compass", root_path, {:class=>"brand"}
     %ul.nav
       %li{:class => :active=="about" ? 'active' : ''}
         %a About

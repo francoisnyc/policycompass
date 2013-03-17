@@ -7,8 +7,5 @@ class Candidate < ActiveRecord::Base
   has_many :candidate_categories
   has_many :categories, :through => :candidate_categories
 
-  attr_accessible :name, :formal_affiliation, :website
-
-  validates :name,  presence: true, 
-  					length: { maximum: 50 }
+  attr_accessible :display_name, :formal_affiliation, :website
 end

@@ -1,4 +1,6 @@
 Policycompass::Application.routes.draw do
+  match '/signup', to: 'users#new'
+
   root to: 'static_pages#index'
 
   get "static_pages/prelaunch"
@@ -8,6 +10,8 @@ Policycompass::Application.routes.draw do
   get "static_pages/dashboard"
 
   get "static_pages/feed"
+
+  resources :users
 
   resources :orgs do
     member do 

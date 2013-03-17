@@ -3,8 +3,5 @@ class Org < ActiveRecord::Base
   has_many :policies
   has_many :questions, through: :policies
 
-  attr_accessible :contact_name, :location, :name, :phone_number, :website
-
-  validates :name,  presence: true, 
-  					length: { maximum: 50 }
+  attr_accessible :display_name, :contact_name, :location, :phone_number, :website
 end

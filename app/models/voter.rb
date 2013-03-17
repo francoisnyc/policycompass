@@ -7,8 +7,5 @@ class Voter < ActiveRecord::Base
   has_many :voter_categories
   has_many :categories, :through => :voter_categories
 
-  attr_accessible :name, :formal_affiliation, :location
-
-  validates :name,  presence: true, 
-                    length: { maximum: 50 }
+  attr_accessible :display_name, :formal_affiliation, :location
 end
