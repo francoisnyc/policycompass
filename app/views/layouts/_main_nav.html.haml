@@ -1,10 +1,17 @@
-.navbar.navbar-inverse
+.navbar.navbar-inverse.navbar-fixed-top
   .navbar-inner
     %a.brand{:href => "#"} Policy Compass
     %ul.nav
-      %li
-        %a{:href => "#"} Home
-      %li{:class => :active=="dashboard" ? 'active' : ''}
-        %a{:href => "#"} Dashboard
-      %li
-        %a{:href => "#", :class=>"pull-right"} Log Out
+      %li{:class => :active=="about" ? 'active' : ''}
+        %a About
+        
+      
+    %ul.nav.pull-right
+      //  -if signed_in? 
+      //    %li
+      //      = link_to "Profile", current_user
+      //    %li
+      //      = link_to "Sign Out", signout_path, method: "delete"
+      //  -else
+      %li 
+        =link_to "Sign in", "#"

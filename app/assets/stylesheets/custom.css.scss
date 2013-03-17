@@ -37,6 +37,10 @@ $small-space: 5px;
   }
 }
 
+body {
+  padding-top: 40px; /*to accoutn for fixed nav*/
+}
+
 .ashley-btn {
   border: none;
   background: $dark-yellow;
