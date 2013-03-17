@@ -5,5 +5,7 @@ class Org < ActiveRecord::Base
   attr_accessible :contact_name, :location, :name, :phone_number, :website
 
   validates :name, :location, :contact_name, :website, :phone_number, presence: true
-
+  validates :name,  presence: true, length: { maximum: 50 }
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }
 end
