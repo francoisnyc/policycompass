@@ -27,7 +27,6 @@ if entered_num.integer? && entered_num > 0
   voter = entered_num.times.map do
     Voter.create do |u|
       u.name = Faker::Name.name
-      u.email = Faker::Internet.email
       u.location = Faker::Address.state
       u.formal_affiliation = AFFILIATIONS.sample(1).first
     end
@@ -50,6 +49,8 @@ if entered_num.integer? && entered_num > 0
       c.name = Faker::Name.name
       c.website = Faker::Internet.url
       c.formal_affiliation = AFFILIATIONS.sample(1).first
+
+      c.approved = true
     end
   end
   STDOUT.puts "\n#{entered_num} records successfully created!"
