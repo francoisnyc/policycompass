@@ -13,6 +13,13 @@ $light-white: #ECF0F1;
 $dark-white: #BDC3C7;
 $light-grey: #95A5A6;
 $dark-grey: #7F8C8D;
+$grayMediumLight: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Lato', Helvetica, sans-serif;
@@ -171,4 +178,16 @@ footer {
 }
 .group {
   zoom: 1; /* IE6&6 */
+}
+
+
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
 }
