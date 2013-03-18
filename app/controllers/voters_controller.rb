@@ -6,11 +6,6 @@ class VotersController < ApplicationController
   end
 
   def create
-    if @voter.save
-      redirect_to @voter, notice: 'Your profile was successfully created.'
-    else
-      render action: 'new'
-    end
   end
 
   def edit
