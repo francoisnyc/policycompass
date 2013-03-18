@@ -6,6 +6,11 @@ class VotersController < ApplicationController
   end
 
   def create
+    if @voter.save
+      redirect_to @voter, notice: 'Your profile was successfully created.'
+    else
+      render action: 'new'
+    end
   end
 
   def edit
@@ -31,7 +36,7 @@ class VotersController < ApplicationController
   private
 
     def require_voter
-      @voter = Voter.find(params[:id])
+      @voter = User.find(params[:id]).voter
     end
 
 end

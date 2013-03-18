@@ -42,7 +42,7 @@ class CandidatesController < ApplicationController
   private
 
     def require_candidate
-      @candidate = Candidate.find(params[:id])
+      @candidate = User.find(params[:id]).candidate
     end
 
 end

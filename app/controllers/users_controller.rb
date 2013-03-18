@@ -3,6 +3,12 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def show
+    redirect_to voter_url if current_user.voter?
+    redirect_to org_url if current_user.org?
+    redirect_to candidate_url if current_user.candidate?
+  end
+
   def create
     @user = User.new(params[:user])
     if @user.save

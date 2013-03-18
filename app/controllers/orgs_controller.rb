@@ -39,7 +39,7 @@ class OrgsController < ApplicationController
   private
 
     def require_org
-      @org = Org.find(params[:id])
+      @org = User.find(params[:id]).org
     end
 
 
