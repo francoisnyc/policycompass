@@ -1,29 +1,23 @@
-#wrap
-  .container-fluid
-    .hero-unit
-      .row-fluid
-        .span12
-          = image_tag "compass.png"
-          %h1 policy compass
-          %h2 helping you navigate local NY candidates and their policy positions
-          %hr
-          //- unless signed_in?
-          =render partial: 'form'
-    .row-fluid
-      .span4
-        = image_tag "policy.png"
-        %h3 Discover candidates' policy positions.
-      .span4
-        = image_tag "candidates.png"
-        %h3 Compare and contrast your position with candidates.
-      .span4
-        = image_tag "vote.png" 
-        %h3 Make informed voting decisions.
-  #push
-%footer
-  .container-fluid
-    %p made by these awesome people
-    %p march 2013
+.hero-unit
+  .row-fluid
+    .span12
+      = image_tag "compass.png"
+      %h1 policy compass
+      %h2 helping you navigate local NY candidates and their policy positions
+      %hr
+      - unless signed_in?
+        =render partial: 'form'
+.row-fluid
+  .span4
+    = image_tag "policy.png"
+    %h3 Discover candidates' policy positions.
+  .span4
+    = image_tag "candidates.png"
+    %h3 Compare and contrast your position with candidates.
+  .span4
+    = image_tag "vote.png" 
+    %h3 Make informed voting decisions.
+
 
 
 
