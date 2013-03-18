@@ -2,11 +2,10 @@
   .container-fluid
     .hero-unit
       .row-fluid
-        .span8
+        .span12
           %h1 policy compass
           = image_tag "compass.png"
           %h2 helping you navigate local NY candidates and their policy positions
-        .span4.login-form
           //- unless signed_in?
           =render partial: 'form'
     .row-fluid

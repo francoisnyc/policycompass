@@ -1,5 +1,4 @@
 Policycompass::Application.routes.draw do
-  match '/signup', to: 'users#new'
 
   root to: 'static_pages#index'
 
@@ -12,6 +11,11 @@ Policycompass::Application.routes.draw do
   get "static_pages/feed"
 
   resources :users
+  resources :sessions, only: [:new, :create, :destroy]
+
+  match '/signup', to: 'users#new'
+  match '/signin', to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete
 
   resources :orgs do
     member do 
