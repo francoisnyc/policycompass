@@ -3,17 +3,17 @@
     .span12
       = image_tag "compass.png"
       %h1 policy compass
-      %h2 helping you navigate local NY candidates and their policy positions
+      %h2 helping you navigate local NY politicians and their policy positions
       %hr
       - unless signed_in?
         =render partial: 'form'
 .row-fluid
   .span4
     = image_tag "policy.png"
-    %h3 Discover candidates' policy positions.
+    %h3 Discover politicians' policy positions.
   .span4
     = image_tag "candidates.png"
-    %h3 Compare and contrast your position with candidates.
+    %h3 Compare and contrast your position with politicians.
   .span4
     = image_tag "vote.png" 
     %h3 Make informed voting decisions.
