@@ -15,6 +15,7 @@ Policycompass::Application.routes.draw do
 
   match '/signup', to: 'users#new'
   match '/knight_challenge', to: 'static_pages#knight_challenge'
+  match '/about', to: 'static_pages#knight_challenge'
   match '/signin', to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete, :as => :signout
 
