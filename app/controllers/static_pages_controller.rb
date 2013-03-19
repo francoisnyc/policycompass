@@ -11,4 +11,7 @@ class StaticPagesController < ApplicationController
 
   def index
   end
+
+  def knight_challenge
+  end
 end

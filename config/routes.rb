@@ -10,36 +10,39 @@ Policycompass::Application.routes.draw do
 
   get "static_pages/feed"
 
-  resources :users
+  
   resources :sessions, only: [:new, :create, :destroy]
 
   match '/signup', to: 'users#new'
+  match '/knight_challenge', to: 'static_pages#knight_challenge'
   match '/signin', to: 'sessions#new'
-  match '/signout', to: 'sessions#destroy', via: :delete
+  match '/signout', to: 'sessions#destroy', via: :delete, :as => :signout
 
-  resources :orgs do
-    member do 
-      get 'dashboard'
-    end
-    resources :policies do
+  resources :users do
+    resources :orgs do
+      member do 
+        get 'dashboard'
+      end
+      resources :policies do
       resources :questions
+      end
     end
-  end
 
-  resources :voters do 
-    member do 
-      get 'feed'
-      get 'dashboard'
+    resources :voters do 
+      member do 
+        get 'feed'
+        get 'dashboard'
+      end
+      resources :voter_answers
     end
-    resources :voter_answers
-  end
 
-  resources :candidates do
-    member do 
-      get 'feed'
-      get 'dashboard'
+    resources :candidates do
+      member do 
+        get 'feed'
+        get 'dashboard'
+      end
+      resources :candidate_answers
     end
-    resources :candidate_answers
   end
 
 
