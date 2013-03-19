@@ -7,13 +7,33 @@
       %hr
       - unless signed_in?
         =render partial: 'form'
+%h2 What is Policy Compass?
+.row-fluid
+  .span6
+    %h3 A Framework for Soliciting and Calculating Sentiment
+  .span6
+    %h3 A Platform for Exploring and Evangelizing Policy
+%h2 Who is Policy Compass For?
 .row-fluid
   .span4
-    = image_tag "policy.png"
-    %h3 Discover candidates' policy positions.
+    %h3 Organizations
   .span4
-    = image_tag "candidates.png"
-    %h3 Compare and contrast your position with candidates.
+    %h3 Voters
   .span4
-    = image_tag "vote.png" 
-    %h3 Make informed voting decisions.
+    %h3 Candidates
+%h2 For Voters and Candidates
+.row-fluid
+  .span4
+    %h3 Discover
+  .span4
+    %h3 Analyze
+  .span4
+    %h3 Act
+%h2 For Organizations
+.row-fluid
+  .span4
+    %h3 Solicit
+  .span4
+    %h3 Monitor
+  .span4
+    %h3 Evangelize
