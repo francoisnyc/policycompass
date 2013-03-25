@@ -44,7 +44,7 @@ $grayMediumLight: #eaeaea;
 }
 
 @mixin text_shadow {
-  text-shadow: $dark-blue -1px -1px;
+  text-shadow: $light-blue -1px -1px, $dark-blue 2px 2px;
 }
 
 @mixin box_shadow {

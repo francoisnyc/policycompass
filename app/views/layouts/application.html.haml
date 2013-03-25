@@ -44,7 +44,8 @@
   =javascript_include_tag "application"
   :javascript
     $(document).ready(function() {
-      $('.carousel').carousel({
-        interval: 2500
+      $('#myTab a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
       })
     });

@@ -1,22 +1,31 @@
-#carousel.carousel.slide
-  .carousel-inner
-    .active.item 
-      =image_tag "nytm_andrew_sopa.jpg", {:class=>"img"}
-      .carousel-caption
-        %h4 Discover organizations who are actively engaging with local and national policy
-        %p
-    .item 
-      =image_tag "candidate_frac.jpg", {:class=>"img"}
-      .carousel-caption
-        %h4 Be matched with candidates who share the same policy concerns as you
-        %p
-    .item 
-      =image_tag "right_to_literacy.jpg", {:class=>"img"}
-      .carousel-caption
-        %h4 Stay up to date with candidate and organziation policy positions
-        %p
-  %a.carousel-control.left{:href=>"#carousel", :data=>{:slide=>"prev"}} &lsaquo;
-  %a.carousel-control.right{:href=>"#carousel", :data=>{:slide=>"next"}} &rsaquo;
+%section
+  %h2 
+  %ul.nav.nav-tabs
+    %li
+      %a{:href=>"#voters", :data=>{:toggle=>"tab"}} Voters
+    %li
+      %a{:href=>"#orgs", :data=>{:toggle=>"tab"}} Organizations
+    %li
+      %a{:href=>"#politicians", :data=>{:toggle=>"tab"}} Politicians
+  .tab-content
+    #voters.tab-pane.active
+      .row-fluid
+        .span6
+          %h3 Discover politicians and organizations who support causes you care about and monitor your shared sentiment with them over time.
+        .span6
+          = image_tag "nytm_andrew_sopa.jpg", {:class=>"img"}
+    #orgs.tab-pane
+      .row-fluid
+        .span6
+          %h2 Solicit, monitor, and analyze politicians' and voters' policy sentiments and identify potential supporters, volunteers, or alliances.
+        .span6
+          = image_tag "candidate_frac.jpg", {:class=>"img"}
+    #politicians.tab-pane
+      .row-fluid
+        .span6
+          %h2 Document your policy stance in a sharable way so that campaigners and supporters can evangelize your platform.
+        .span6
+          = image_tag "right_to_literacy.jpg", {:class=>"img"}
 %section.row-fluid
   .span4
     = image_tag "policy.png"
