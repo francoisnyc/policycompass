@@ -11,6 +11,7 @@
     /[if lt IE 9]
       %script{:src=>'http://html5shim.googlecode.com/svn/trunk/html5.js'}
   %body
+    =render :partial => 'layouts/main_nav'
     .row-fluid.titlebar
       .span10
         %h1 policy compass
@@ -19,8 +20,9 @@
           =render partial: 'form'
       .span2.logo
         = image_tag "compass.png"
+      %a{:href=>"https://github.com/OpenNY/policycompass"}
+        %img#github{:src=>"https://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png", :alt=>"Fork me on GitHub"}
     .container-fluid
-      =render :partial => 'layouts/main_nav'
       - flash.each do |key, value|
         .flash(class=key)= value
       =yield
