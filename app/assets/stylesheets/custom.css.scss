@@ -15,6 +15,17 @@ $light-grey: #95A5A6;
 $dark-grey: #7F8C8D;
 $grayMediumLight: #eaeaea;
 
+@mixin blue_gradient {
+  background: #3498db; /* Old browsers */
+  background: -moz-linear-gradient(top, #3498db 0%, #2980b9 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3498db), color-stop(100%,#2980b9)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #3498db 0%,#2980b9 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #3498db 0%,#2980b9 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #3498db 0%,#2980b9 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #3498db 0%,#2980b9 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3498db', endColorstr='#2980b9',GradientType=0 ); /* IE6-9 */
+}
+
 @mixin box_sizing {
   -moz-box-sizing: border-box; 
   -webkit-box-sizing: border-box; 
@@ -22,7 +33,11 @@ $grayMediumLight: #eaeaea;
 }
 
 @mixin text_shadow {
-  text-shadow: $light-grey -1px -1px;
+  text-shadow: $dark-blue -1px -1px;
+}
+
+@mixin box_shadow {
+  box-shadow: 0 1px $light-blue, 0 -2px $dark-blue;
 }
 
 body {
@@ -34,14 +49,29 @@ $large-space: 20px;
 $medium-space: 10px;
 $small-space: 5px;
 
+.navbar {
+  background: $dark-blue;
+}
+
 /* button styles */
-.hero-unit {
-  margin-top: 20px;
-  background-color: $dark-blue;
-  border-radius: $medium-space;
-  text-align: center;
+.titlebar {
+  padding: $large-space;
+  margin-bottom: $large-space;
+  @include blue_gradient;
   @include text_shadow;
+  @include box_shadow;
+  .logo {
+    text-align: center;
+    img {
+      position: relative;
+      top: $large-space;
+      right: $large-space;
+    }
+  }
   h1 {
+    font-family: "bariol";
+    font-size: 100px;
+    line-height: 1em;
     color: $light-white;
   }
   h2 {
@@ -50,7 +80,7 @@ $small-space: 5px;
 }
 
 body {
-  padding-top: 40px; /*to accoutn for fixed nav*/
+  padding-top: 40px; /*to account for fixed nav*/
 }
 
 .ashley-btn {

@@ -1,12 +1,13 @@
-.navbar.navbar-inverse.navbar-fixed-top
+.navbar.navbar-fixed-top
   .navbar-inner
-    =link_to "Policy Compass", root_path, {:class=>"brand"}
     %ul.nav
       %li{:class => :active=="about" ? 'active' : ''}
-        = link_to "About", about_path
+        
         
       
     %ul.nav.pull-right
+      %li
+        = link_to "About", about_path
       -if signed_in? 
         %li
           = link_to "Dashboard", @current_user

@@ -12,6 +12,14 @@
       %script{:src=>'js/html5shiv.js'}
   %body
     #wrap
+      .row-fluid.titlebar
+        .span10
+          %h1 policy compass
+          %h2 helping you navigate local NY politicians and their policy positions
+          - unless signed_in?
+            =render partial: 'form'
+        .span2.logo
+          = image_tag "compass.png"
       .container-fluid
         =render :partial => 'layouts/main_nav'
         - flash.each do |key, value|
