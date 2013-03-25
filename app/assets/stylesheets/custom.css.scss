@@ -80,7 +80,16 @@ $small-space: 5px;
 }
 
 body {
-  padding-top: 40px; /*to account for fixed nav*/
+  padding-top: 40px; /*to account for fixed nav */
+}
+
+#carousel {
+  margin-right: -$large-space;
+  margin-left: -$large-space;
+  margin-top: -19px;
+  .item {
+    height: 500px;
+  }
 }
 
 .ashley-btn {
@@ -114,7 +123,8 @@ body {
 
 section {
   vertical-align: middle;
-  h2 {
+  margin: $large-space;
+  h3 {
     color: $dark-blue;
   }
   div {

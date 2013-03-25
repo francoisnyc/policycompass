@@ -1,4 +1,23 @@
-.row-fluid
+#carousel.carousel.slide
+  .carousel-inner
+    .active.item 
+      =image_tag "nytm_andrew_sopa.jpg", {:class=>"img"}
+      .carousel-caption
+        %h4 Discover organizations who are actively engaging with local and national policy
+        %p
+    .item 
+      =image_tag "candidate_frac.jpg", {:class=>"img"}
+      .carousel-caption
+        %h4 Be matched with candidates who share the same policy concerns as you
+        %p
+    .item 
+      =image_tag "right_to_literacy.jpg", {:class=>"img"}
+      .carousel-caption
+        %h4 Stay up to date with candidate and organziation policy positions
+        %p
+  %a.carousel-control.left{:href=>"#carousel", :data=>{:slide=>"prev"}} &lsaquo;
+  %a.carousel-control.right{:href=>"#carousel", :data=>{:slide=>"next"}} &rsaquo;
+%section.row-fluid
   .span4
     = image_tag "policy.png"
     %h3 Discover politicians' policy positions.
