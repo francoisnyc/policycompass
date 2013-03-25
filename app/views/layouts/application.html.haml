@@ -28,8 +28,19 @@
       =yield
       = debug(params) if Rails.env.development?
     %footer
-      %p A project by OpenNY Forum, a proud member of the Code for America Brigade community.
-      %p March 2013
+      .row-fluid
+        .span10.row-fluid
+          %a{:href=>"https://www.facebook.com/OpenNYforum"}
+            = image_tag "facebook-48.png", {:class=>"img facebook"}
+          %a{:href=>"https://github.com/openNY/"}
+            = image_tag "github-48.png", {:class=>"img github"}
+          %a{:href=>"https://twitter.com/OpenNYforum"}
+            = image_tag "twitter-48.png", {:class=>"img twitter"}
+          %a{:href=>"mailto: opennyforum@gmail.com"}
+            = image_tag "email-48.png", {:class=>"img email"}
+          %p A project by OpenNY Forum, a proud member of the Code for America Brigade community. March 2013
+        .span2
+          = image_tag "cfab_logo.jpg", {:class=>"img img-polaroid "}
   =javascript_include_tag "application"
   :javascript
     $(document).ready(function() {
