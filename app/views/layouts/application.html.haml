@@ -22,7 +22,7 @@
         = image_tag "compass.png"
       %a{:href=>"https://github.com/OpenNY/policycompass"}
         %img#github{:src=>"https://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png", :alt=>"Fork me on GitHub"}
-    .container-fluid
+    .container
       - flash.each do |key, value|
         .flash(class=key)= value
       =yield

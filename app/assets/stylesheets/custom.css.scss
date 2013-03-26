@@ -47,6 +47,10 @@ $grayMediumLight: #eaeaea;
   text-shadow: $light-blue -1px -1px, $dark-blue 2px 2px;
 }
 
+@mixin white_text_shadow {
+  text-shadow: $light-white -1px -1px, $dark-white 2px 2px;
+}
+
 @mixin box_shadow {
   box-shadow: 0 1px $light-blue, 0 -2px $dark-blue;
 }
@@ -145,7 +149,6 @@ body {
     color: $dark-blue;
   }
   .row-fluid {
-    background: white;
     div {
       padding: $large-space;
       text-align: center;
@@ -158,17 +161,10 @@ body {
 }
 
 #audience {
-  overflow: auto;
-  margin-top: $large-space;
-  ul {
-    list-style: none;
-    li {
-      .row {
-        background-color: white;
-        padding: $medium-space;
-        margin: $medium-space auto;
-      }
-    }
+  .row {
+    background-color: white;
+    padding: $medium-space;
+    margin: $medium-space auto;
   }
   h2 {
     font-family: "bariol";
