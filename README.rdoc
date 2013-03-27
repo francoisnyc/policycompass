@@ -4,3 +4,18 @@ managed by Ashley Williams, @ag_dubs
 
 spec: https://hackpad.com/Policy-Compass-Product-Spec-g90t7tC6clE
 
+== Environment Set-up
+
+Instructions by Jackie Trahan, @JackieTrahan
+
+On GitHub:
+1. Sign-In to your account.
+2. Click Fork in the upper-right hand corner.
+
+In your terminal:
+1. enter: git clone <<The HTTP link to your git>>
+2. enter: cd policycompass
+3. enter: bundle install
+4. enter: rake db:migrate
+
+Congrats! You are now locally running Policy Compass in your browser at http://localhost:3000
