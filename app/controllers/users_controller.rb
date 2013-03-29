@@ -4,9 +4,10 @@ class UsersController < ApplicationController
   end
 
   def show
-    redirect_to voter_url if current_user.voter?
-    redirect_to org_url if current_user.org?
-    redirect_to candidate_url if current_user.candidate?
+    #redirect_to user_url if current_user.voter?
+    #redirect_to org_url if current_user.org?
+    #redirect_to candidate_url if current_user.candidate?
+    @user = User.find(params[:id])
   end
 
   def create

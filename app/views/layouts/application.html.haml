@@ -16,7 +16,7 @@
       .span10
         %h1 policy compass
         %h2 navigate the local and national policy landscape
-        - unless signed_in?
+        - unless signed_in? || request.env['PATH_INFO'] == '/signin'
           =render partial: 'form'
       .span2.logo
         = image_tag "compass.png"
